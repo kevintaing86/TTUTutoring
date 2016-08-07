@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nnf-TG-5kY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="rCR-X6-ZWr">
+            <objects>
+                <navigationController id="nnf-TG-5kY" customClass="MainNavigationController" customModule="TTUTutoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBc-sO-oFW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sjK-DB-bse" kind="relationship" relationship="rootViewController" id="wGl-3N-Uha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O0c-v7-0eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-373" y="338"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="QF7-7s-0E9">
+            <objects>
+                <viewController storyboardIdentifier="Home" title="Home" id="sjK-DB-bse" customClass="HomeViewController" customModule="TTUTutoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z4T-Jg-uID"/>
+                        <viewControllerLayoutGuide type="bottom" id="dFn-vx-JKY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="40f-m0-bZP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TTU Tutoring" id="rJx-jA-PG5"/>
+                    <connections>
+                        <outlet property="homeVavigationItem" destination="rJx-jA-PG5" id="EkL-hZ-55C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJT-Fd-QSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="338"/>
+        </scene>
+    </scenes>
+</document>
