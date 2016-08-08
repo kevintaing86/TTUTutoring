@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A130B5D01D580EA800DE03FF /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130B5CF1D580EA800DE03FF /* DataSource.swift */; };
 		A18DB9DD1D56CCC100ECB46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9DC1D56CCC100ECB46B /* AppDelegate.swift */; };
 		A18DB9E21D56CCC100ECB46B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18DB9E01D56CCC100ECB46B /* Main.storyboard */; };
 		A18DB9E41D56CCC100ECB46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18DB9E31D56CCC100ECB46B /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A130B5CF1D580EA800DE03FF /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		A18DB9D91D56CCC100ECB46B /* TTUTutoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTUTutoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18DB9DC1D56CCC100ECB46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18DB9E11D56CCC100ECB46B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		A18DB9D01D56CCC100ECB46B = {
 			isa = PBXGroup;
 			children = (
+				A130B5CF1D580EA800DE03FF /* DataSource.swift */,
 				A18DB9DB1D56CCC100ECB46B /* TTUTutoring */,
 				A18DB9F01D56CCC100ECB46B /* TTUTutoringTests */,
 				A18DB9DA1D56CCC100ECB46B /* Products */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18DB9FE1D56CEC300ECB46B /* MainNavigationController.swift in Sources */,
+				A130B5D01D580EA800DE03FF /* DataSource.swift in Sources */,
 				A18DB9DD1D56CCC100ECB46B /* AppDelegate.swift in Sources */,
 				A18DBA001D56D04300ECB46B /* HomeViewController.swift in Sources */,
 			);
@@ -402,6 +406,7 @@
 				A18DB9F81D56CCC100ECB46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A18DB9F91D56CCC100ECB46B /* Build configuration list for PBXNativeTarget "TTUTutoringTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +415,7 @@
 				A18DB9FB1D56CCC100ECB46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
