@@ -117,7 +117,21 @@ class TutorData {
         Yewande.tutorSchedule = ["Monday-Thursday":"9am-2pm"]
         Tutors?.append(Yewande)
     }
+    
+    func numberOfTutorsWithSubject(subject: String)->Int{
+        var count: Int = 0
+        for tutor in Tutors!{
+            if(tutor.tutorSubjects.contains(subject)){
+               count = count + 1
+            }
+        }
+        return count
+    }
 }
+
+
+
+
 
 
 

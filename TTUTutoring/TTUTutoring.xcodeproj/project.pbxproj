@@ -15,6 +15,7 @@
 		A18DB9F21D56CCC100ECB46B /* TTUTutoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9F11D56CCC100ECB46B /* TTUTutoringTests.swift */; };
 		A18DB9FE1D56CEC300ECB46B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9FD1D56CEC300ECB46B /* MainNavigationController.swift */; };
 		A18DBA001D56D04300ECB46B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9FF1D56D04300ECB46B /* HomeViewController.swift */; };
+		A1E96F3A1D5C1F1E00EB7644 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E96F391D5C1F1E00EB7644 /* SubjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A18DB9F31D56CCC100ECB46B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A18DB9FD1D56CEC300ECB46B /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		A18DB9FF1D56D04300ECB46B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A1E96F391D5C1F1E00EB7644 /* SubjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				A18DB9FD1D56CEC300ECB46B /* MainNavigationController.swift */,
 				A18DB9FF1D56D04300ECB46B /* HomeViewController.swift */,
+				A1E96F391D5C1F1E00EB7644 /* SubjectViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				A18DB9FE1D56CEC300ECB46B /* MainNavigationController.swift in Sources */,
 				A130B5D01D580EA800DE03FF /* DataSource.swift in Sources */,
+				A1E96F3A1D5C1F1E00EB7644 /* SubjectViewController.swift in Sources */,
 				A18DB9DD1D56CCC100ECB46B /* AppDelegate.swift in Sources */,
 				A18DBA001D56D04300ECB46B /* HomeViewController.swift in Sources */,
 			);

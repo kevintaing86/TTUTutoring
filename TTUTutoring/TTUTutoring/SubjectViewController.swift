@@ -1,25 +1,22 @@
 //
-//  HomeViewController.swift
+//  SubjectViewController.swift
 //  TTUTutoring
 //
-//  Created by Kevin Taing on 8/6/16.
+//  Created by Kevin Taing on 8/10/16.
 //  Copyright © 2016 Kevin Taing. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Outlets and members
-    @IBOutlet weak var homeVavigationItem: UINavigationItem!
-    @IBOutlet weak var bottomToolbar: UIToolbar!
+    var Tutors = TutorData()
+    var Subject: String = ""
     
     // MARK: - Actions and methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bottomToolbar.backgroundColor = UIColor(red:204.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        bottomToolbar.barTintColor = UIColor(red:204.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        
         // Do any additional setup after loading the view.
     }
 
@@ -29,17 +26,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subjects.count
+        return Tutors.numberOfTutorsWithSubject(Subject)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        
-        Cell.textLabel?.text = subjects[indexPath.row]
-        
+        //need to find a way to populate cells
         return Cell
     }
-    
-    // NEED TO PASS SUBJECT TO SUBJECT_VIEW_CONTROLLER
-    
 }
