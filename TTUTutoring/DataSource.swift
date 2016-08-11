@@ -8,6 +8,20 @@
 
 import Foundation
 
+var subjects = [
+    "Accouting",
+    "Chemistry",
+    "Computer Sci.",
+    "Economics",
+    "English",
+    "Math",
+    "Mech. Eng.",
+    "Physics",
+    "Statistics",
+    "Pol. Sci/Pysch",
+    "Finance"
+]
+
 struct Tutor {
     var tutorName: String = ""
     var tutorSubjects: [String] = [""]
