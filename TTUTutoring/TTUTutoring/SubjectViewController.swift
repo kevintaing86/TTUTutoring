@@ -32,6 +32,13 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         //need to find a way to populate cells
+        
+        for tutor in Tutors.Tutors!{
+            if(tutor.tutorSubjects.contains(Subject)){
+                Cell.textLabel?.text = tutor.tutorName
+                return Cell
+            }
+        }
         return Cell
     }
 }

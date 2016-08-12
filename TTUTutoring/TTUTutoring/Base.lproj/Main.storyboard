@@ -79,7 +79,7 @@
         <!--Subject-->
         <scene sceneID="GQG-kX-Oiq">
             <objects>
-                <viewController storyboardIdentifier="Subject" title="Subject" id="Q8z-aQ-41b" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Subject" title="Subject" id="Q8z-aQ-41b" customClass="SubjectViewController" customModule="TTUTutoring" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I6V-uG-Yy4"/>
                         <viewControllerLayoutGuide type="bottom" id="5Gk-57-C28"/>
