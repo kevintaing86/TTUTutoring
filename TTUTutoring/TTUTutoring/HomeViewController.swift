@@ -40,6 +40,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return Cell
     }
     
-    // NEED TO PASS SUBJECT TO SUBJECT_VIEW_CONTROLLER
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let subjectVC = storyboard?.instantiateViewControllerWithIdentifier("Subject") as! SubjectViewController
+        subjectVC.Subject = subjects[indexPath.row]
+        navigationController?.pushViewController(subjectVC, animated: true)
+    }
     
 }
