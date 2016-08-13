@@ -43,6 +43,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let subjectVC = storyboard?.instantiateViewControllerWithIdentifier("Subject") as! SubjectViewController
         subjectVC.Subject = subjects[indexPath.row]
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Home"
+        navigationItem.backBarButtonItem = backItem
+        
         navigationController?.pushViewController(subjectVC, animated: true)
     }
     

@@ -12,12 +12,14 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - Outlets and members
     var Tutors = TutorData()
     var Subject: String = ""
+    @IBOutlet weak var toolbar: UIToolbar!
     
     // MARK: - Actions and methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        toolbar.backgroundColor = UIColor(red:204.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        toolbar.barTintColor = UIColor(red:204.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,12 +35,12 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
         //need to find a way to populate cells
         
-        for tutor in Tutors.Tutors!{
-            if(tutor.tutorSubjects.contains(Subject)){
-                Cell.textLabel?.text = tutor.tutorName
-                return Cell
-            }
-        }
+        Cell.textLabel?.text = Tutors.tutorsWithSubject(Subject)[indexPath.row].tutorName
+        
         return Cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
     }
 }
