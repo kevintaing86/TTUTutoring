@@ -10,10 +10,15 @@ import UIKit
 
 class TutorProfileViewController: UIViewController {
 
+    // MARK: - Outlets and variables
+    @IBOutlet weak var contentView: UIView!
+    
+    
+    // MARK: - Actions and methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        contentView.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {

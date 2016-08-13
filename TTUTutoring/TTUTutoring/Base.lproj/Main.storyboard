@@ -131,7 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="toolbar" destination="Yl4-Qh-3fy" id="hUX-0v-eiJ"/>
-                        <segue destination="Om5-tM-NnU" kind="presentation" identifier="toTutorProfileSegue" modalPresentationStyle="fullScreen" id="owg-Pv-HXJ"/>
+                        <segue destination="Om5-tM-NnU" kind="presentation" identifier="toTutorProfileSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="owg-Pv-HXJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybu-YA-hwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,12 +150,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-Dg-mGD">
-                                <rect key="frame" x="20" y="28" width="560" height="552"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-HP-Cbn">
+                                <rect key="frame" x="50" y="70" width="500" height="460"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="O3i-HP-Cbn" firstAttribute="centerY" secondItem="PCw-au-5rS" secondAttribute="centerY" id="3sb-Wz-haM"/>
+                            <constraint firstItem="O3i-HP-Cbn" firstAttribute="leading" secondItem="PCw-au-5rS" secondAttribute="leadingMargin" constant="30" id="FFO-l1-oD6"/>
+                            <constraint firstItem="O3i-HP-Cbn" firstAttribute="centerX" secondItem="PCw-au-5rS" secondAttribute="centerX" id="bYB-Rr-2pn"/>
+                            <constraint firstItem="O3i-HP-Cbn" firstAttribute="top" secondItem="5kH-AU-2Lq" secondAttribute="bottom" constant="50" id="gbf-2Q-CRb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="O3i-HP-Cbn" id="g22-Jk-4Qa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yb7-Qs-HVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
