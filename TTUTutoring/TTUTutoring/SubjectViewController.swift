@@ -41,6 +41,14 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
+        //performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
+
+        let x = TutorProfileViewController()
+        x.tutor = Tutors.Tutors[indexPath.row]
+        x.performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?, index: Int) {
+        
     }
 }

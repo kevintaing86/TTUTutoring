@@ -8,11 +8,11 @@
 
 import UIKit
 
-class TutorProfileViewController: UIViewController {
+class TutorProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Outlets and variables
     @IBOutlet weak var contentView: UIView!
-    
+    var tutor: Tutor?
     
     // MARK: - Actions and methods
     
@@ -26,4 +26,13 @@ class TutorProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (tutor?.tutorSubjects.count)!
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        return Cell
+    }
 }
