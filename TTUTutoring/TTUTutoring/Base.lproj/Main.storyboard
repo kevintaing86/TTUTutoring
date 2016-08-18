@@ -153,10 +153,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-HP-Cbn">
                                 <rect key="frame" x="50" y="70" width="500" height="460"/>
                                 <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2w-y4-Al8">
+                                        <rect key="frame" x="9" y="73" width="482" height="346"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ZPY-gd-cVr">
+                                                <rect key="frame" x="0.0" y="28" width="482" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZPY-gd-cVr" id="prs-4b-TyX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="482" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Om5-tM-NnU" id="rdw-Fi-kps"/>
+                                            <outlet property="delegate" destination="Om5-tM-NnU" id="fHq-EV-DIN"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awc-6b-h4b">
+                                        <rect key="frame" x="449" y="4" width="39" height="22"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeView:" destination="Om5-tM-NnU" eventType="touchUpInside" id="f1M-a6-PMP"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V58-Ht-deq">
-                                        <rect key="frame" x="8" y="21" width="484" height="21"/>
+                                        <rect key="frame" x="8" y="31" width="484" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="ObB-JY-vKF"/>
+                                            <constraint firstAttribute="height" constant="21" id="Ym2-wb-cl6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,43 +192,29 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="V58-Ht-deq" firstAttribute="top" secondItem="O3i-HP-Cbn" secondAttribute="top" constant="21" id="NYC-Ft-36s"/>
-                                    <constraint firstItem="V58-Ht-deq" firstAttribute="trailing" secondItem="O3i-HP-Cbn" secondAttribute="trailingMargin" id="nob-n8-RPg"/>
-                                    <constraint firstItem="V58-Ht-deq" firstAttribute="leading" secondItem="O3i-HP-Cbn" secondAttribute="leadingMargin" id="pEO-Bo-fid"/>
+                                    <constraint firstItem="Awc-6b-h4b" firstAttribute="top" secondItem="O3i-HP-Cbn" secondAttribute="top" constant="4" id="1vX-4Q-wZ6"/>
+                                    <constraint firstItem="Z2w-y4-Al8" firstAttribute="centerX" secondItem="V58-Ht-deq" secondAttribute="centerX" id="9tM-Ba-kvp"/>
+                                    <constraint firstItem="Z2w-y4-Al8" firstAttribute="top" secondItem="V58-Ht-deq" secondAttribute="bottom" constant="21" id="Ajw-4g-G8d"/>
+                                    <constraint firstAttribute="trailing" secondItem="Awc-6b-h4b" secondAttribute="trailing" constant="12" id="JdZ-6S-dDE"/>
+                                    <constraint firstItem="V58-Ht-deq" firstAttribute="leading" secondItem="O3i-HP-Cbn" secondAttribute="leadingMargin" id="ba4-73-cHi"/>
+                                    <constraint firstItem="V58-Ht-deq" firstAttribute="top" secondItem="Awc-6b-h4b" secondAttribute="bottom" constant="5" id="ggK-v6-PfN"/>
+                                    <constraint firstItem="V58-Ht-deq" firstAttribute="top" secondItem="O3i-HP-Cbn" secondAttribute="top" constant="31" id="gvo-9a-Lqn"/>
+                                    <constraint firstItem="V58-Ht-deq" firstAttribute="trailing" secondItem="O3i-HP-Cbn" secondAttribute="trailingMargin" id="pBk-0d-o7Y"/>
+                                    <constraint firstItem="Z2w-y4-Al8" firstAttribute="leading" secondItem="O3i-HP-Cbn" secondAttribute="leading" constant="9" id="vKy-6Z-NWS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z2w-y4-Al8" secondAttribute="bottom" constant="41" id="ztK-02-YW0"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2w-y4-Al8">
-                                <rect key="frame" x="59" y="127" width="482" height="346"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ZPY-gd-cVr">
-                                        <rect key="frame" x="0.0" y="28" width="482" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZPY-gd-cVr" id="prs-4b-TyX">
-                                            <rect key="frame" x="0.0" y="0.0" width="482" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Om5-tM-NnU" id="rdw-Fi-kps"/>
-                                    <outlet property="delegate" destination="Om5-tM-NnU" id="fHq-EV-DIN"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="O3i-HP-Cbn" firstAttribute="centerY" secondItem="PCw-au-5rS" secondAttribute="centerY" id="3sb-Wz-haM"/>
                             <constraint firstItem="O3i-HP-Cbn" firstAttribute="leading" secondItem="PCw-au-5rS" secondAttribute="leadingMargin" constant="30" id="FFO-l1-oD6"/>
-                            <constraint firstItem="Z2w-y4-Al8" firstAttribute="centerX" secondItem="O3i-HP-Cbn" secondAttribute="centerX" id="WOp-vV-hfe"/>
-                            <constraint firstItem="Z2w-y4-Al8" firstAttribute="top" secondItem="5kH-AU-2Lq" secondAttribute="bottom" constant="107" id="WjA-dq-9AU"/>
                             <constraint firstItem="O3i-HP-Cbn" firstAttribute="centerX" secondItem="PCw-au-5rS" secondAttribute="centerX" id="bYB-Rr-2pn"/>
                             <constraint firstItem="O3i-HP-Cbn" firstAttribute="top" secondItem="5kH-AU-2Lq" secondAttribute="bottom" constant="50" id="gbf-2Q-CRb"/>
-                            <constraint firstItem="Z2w-y4-Al8" firstAttribute="leading" secondItem="PCw-au-5rS" secondAttribute="leadingMargin" constant="39" id="geb-95-CJV"/>
-                            <constraint firstItem="Z2w-y4-Al8" firstAttribute="centerY" secondItem="O3i-HP-Cbn" secondAttribute="centerY" id="qqn-qZ-y4d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="O3i-HP-Cbn" id="g22-Jk-4Qa"/>
+                        <outlet property="nameField" destination="V58-Ht-deq" id="mmF-OP-EV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yb7-Qs-HVi" userLabel="First Responder" sceneMemberID="firstResponder"/>

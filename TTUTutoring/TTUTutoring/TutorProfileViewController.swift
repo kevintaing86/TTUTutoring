@@ -13,12 +13,18 @@ class TutorProfileViewController: UIViewController, UITableViewDelegate, UITable
     // MARK: - Outlets and variables
     @IBOutlet weak var contentView: UIView!
     var tutor: Tutor?
+    @IBOutlet weak var nameField: UILabel!
     
     // MARK: - Actions and methods
+    @IBAction func closeView(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.layer.cornerRadius = 10
+        
+        nameField.text = tutor!.tutorName
     }
 
     override func didReceiveMemoryWarning() {

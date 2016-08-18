@@ -12,6 +12,7 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     // MARK: - Outlets and members
     var Tutors = TutorData()
     var Subject: String = ""
+    var indexRow: Int?
     @IBOutlet weak var toolbar: UIToolbar!
     
     // MARK: - Actions and methods
@@ -33,22 +34,19 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        //need to find a way to populate cells
-        
+
         Cell.textLabel?.text = Tutors.tutorsWithSubject(Subject)[indexPath.row].tutorName
         
         return Cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
-
-        let x = TutorProfileViewController()
-        x.tutor = Tutors.Tutors[indexPath.row]
-        x.performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
+        indexRow = indexPath.row
+        performSegueWithIdentifier("toTutorProfileSegue", sender: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?, index: Int) {
-        
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let tutorProfileVC = segue.destinationViewController as! TutorProfileViewController
+        tutorProfileVC.tutor = Tutors.Tutors[indexRow!]
     }
 }

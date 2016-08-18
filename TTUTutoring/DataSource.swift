@@ -32,7 +32,6 @@ class TutorData {
     var Tutors: [Tutor] = []
     
     init(){
-        Tutors = []
         var Alex = Tutor()
         var Bijaya = Tutor()
         var Bobbie = Tutor()
@@ -138,6 +137,15 @@ class TutorData {
         }
         
         return x
+    }
+    
+    func tutorWithName(tutorName: String)->Tutor{
+        for tutor in Tutors{
+            if(tutor.tutorName == tutorName){
+                return tutor
+            }
+        }
+        return Tutor()
     }
 }
 
