@@ -14,6 +14,7 @@ class TutorProfileViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var contentView: UIView!
     var tutor: Tutor?
     @IBOutlet weak var nameField: UILabel!
+    @IBOutlet weak var table: UITableView!
     
     // MARK: - Actions and methods
     @IBAction func closeView(sender: AnyObject) {
@@ -25,6 +26,8 @@ class TutorProfileViewController: UIViewController, UITableViewDelegate, UITable
         contentView.layer.cornerRadius = 10
         
         nameField.text = tutor!.tutorName
+        
+        table.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,11 +36,13 @@ class TutorProfileViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (tutor?.tutorSubjects.count)!
+        return (tutor?.tutorSchedule.count)!
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let Cell = tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        Cell.textLabel?.text = tutor?.tutorSchedule[indexPath.row]
         
         return Cell
     }

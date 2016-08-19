@@ -47,6 +47,6 @@ class SubjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let tutorProfileVC = segue.destinationViewController as! TutorProfileViewController
-        tutorProfileVC.tutor = Tutors.Tutors[indexRow!]
+        tutorProfileVC.tutor = Tutors.tutorsWithSubject(Subject)[indexRow!]
     }
 }
