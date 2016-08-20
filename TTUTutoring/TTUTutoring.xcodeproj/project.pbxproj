@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A119431B1D5EB03100294618 /* TutorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A119431A1D5EB03100294618 /* TutorProfileViewController.swift */; };
 		A130B5D01D580EA800DE03FF /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A130B5CF1D580EA800DE03FF /* DataSource.swift */; };
+		A16FDE521D67E718008FF998 /* LearningCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16FDE511D67E718008FF998 /* LearningCenter.swift */; };
 		A18DB9DD1D56CCC100ECB46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB9DC1D56CCC100ECB46B /* AppDelegate.swift */; };
 		A18DB9E21D56CCC100ECB46B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18DB9E01D56CCC100ECB46B /* Main.storyboard */; };
 		A18DB9E41D56CCC100ECB46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18DB9E31D56CCC100ECB46B /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		A119431A1D5EB03100294618 /* TutorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorProfileViewController.swift; sourceTree = "<group>"; };
 		A130B5CF1D580EA800DE03FF /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		A16FDE511D67E718008FF998 /* LearningCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningCenter.swift; sourceTree = "<group>"; };
 		A18DB9D91D56CCC100ECB46B /* TTUTutoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTUTutoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18DB9DC1D56CCC100ECB46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A18DB9E11D56CCC100ECB46B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16FDE501D67E6E5008FF998 /* MKAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				A16FDE511D67E718008FF998 /* LearningCenter.swift */,
+			);
+			name = MKAnnotations;
+			sourceTree = "<group>";
+		};
 		A18DB9D01D56CCC100ECB46B = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		A18DB9DB1D56CCC100ECB46B /* TTUTutoring */ = {
 			isa = PBXGroup;
 			children = (
+				A16FDE501D67E6E5008FF998 /* MKAnnotations */,
 				A18DB9FC1D56CE2C00ECB46B /* Controllers */,
 				A18DB9DC1D56CCC100ECB46B /* AppDelegate.swift */,
 				A18DB9E01D56CCC100ECB46B /* Main.storyboard */,
@@ -170,6 +181,7 @@
 				TargetAttributes = {
 					A18DB9D81D56CCC100ECB46B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 72KU6E5X4X;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -230,6 +242,7 @@
 				A18DB9FE1D56CEC300ECB46B /* MainNavigationController.swift in Sources */,
 				A130B5D01D580EA800DE03FF /* DataSource.swift in Sources */,
 				A1E96F3A1D5C1F1E00EB7644 /* SubjectViewController.swift in Sources */,
+				A16FDE521D67E718008FF998 /* LearningCenter.swift in Sources */,
 				A18DB9DD1D56CCC100ECB46B /* AppDelegate.swift in Sources */,
 				A18DBA001D56D04300ECB46B /* HomeViewController.swift in Sources */,
 			);
@@ -362,10 +375,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTUTutoring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KevinTaing.TTUTutoring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -373,10 +389,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TTUTutoring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KevinTaing.TTUTutoring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
